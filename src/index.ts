@@ -88,6 +88,7 @@ export default function cnt<
     string | undefined | Array<string | false | undefined>
   > = [];
   if (options !== undefined && mainTheme.options) {
+    // Check options given by user
     const keys = Object.keys(options);
     for (let i = 0; i < keys.length; i++) {
       if (!mainTheme.options) return;

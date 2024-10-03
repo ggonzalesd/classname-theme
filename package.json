@@ -1,6 +1,6 @@
 {
   "name": "classname-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
@@ -12,7 +12,11 @@
     "build": "tsup",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["react", "css", "tailwind", "classname", "util", "utility"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggonzalesd/classname-theme"
+  },
   "author": "Grober Gonzales",
   "license": "MIT",
   "devDependencies": {

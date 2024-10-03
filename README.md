@@ -2,6 +2,13 @@
 
 `classname-theme` is a lightweight library that allows you to configure and generate themes for components using Tailwind classes quickly. It’s designed to provide flexibility in managing variants, sizes, states, and more for component customization.
 
+Installation
+To install the library, use npm:
+
+```bash
+npm install classname-theme
+```
+
 ## Basic Usage
 
 The main function of the library is defineTheme, which lets you define a theme and then generate classes easily for your components.
@@ -11,7 +18,7 @@ The main function of the library is defineTheme, which lets you define a theme a
 1. Define a theme using `defineTheme`:
 
 ```ts
-import { defineTheme } from 'cnt-theme';
+import { defineTheme } from 'classname-theme';
 
 const simpleTheme = {
   initial: { variant: 'primary' },
