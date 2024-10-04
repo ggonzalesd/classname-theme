@@ -54,9 +54,16 @@ export default function cnt<
 
   // Get Variant
   const kVariant = params?.variant ?? theme.initial?.variant;
-  let cVariant: Array<string | undefined | false> | string | undefined;
+  let cVariant:
+    | Array<string | string[] | undefined | false>
+    | string
+    | undefined;
   if (mainTheme.variants && kVariant) {
-    cVariant = tools.resolveToggle(mainTheme.variants[kVariant], active);
+    cVariant = tools.resolveToggleComplex(
+      mainTheme.variants[kVariant],
+      'variants',
+      params,
+    );
   }
 
   // Get Size

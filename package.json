@@ -1,6 +1,6 @@
 {
   "name": "classname-theme",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",

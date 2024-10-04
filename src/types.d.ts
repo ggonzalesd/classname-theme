@@ -13,6 +13,20 @@ export interface CntThemeToggle {
   on?: string;
 }
 
+type CntRecord<K extends string, V> = Partial<Record<K, V>>;
+
+export interface CntThemeModule<
+  V extends string,
+  S extends string,
+  F extends string,
+  SS extends string,
+> extends CntThemeToggle {
+  variants?: CntRecord<V, string>;
+  sizes?: CntRecord<S, string>;
+  flags?: CntRecord<F, string>;
+  states?: CntRecord<SS, string>;
+}
+
 export interface CntThemeItem<
   V extends string,
   S extends string,
@@ -20,7 +34,10 @@ export interface CntThemeItem<
   SS extends string,
   OP extends string,
 > extends CntThemeToggle {
-  variants?: Partial<Record<V, string | CntThemeToggle>>;
+  variants?: CntRecord<
+    V,
+    string | Omit<CntThemeModule<V, S, F, SS>, 'variants'>
+  >;
   sizes?: Partial<Record<S, string | CntThemeToggle>>;
 
   states?: Partial<Record<SS, string | CntThemeToggle>>;
