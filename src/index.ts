@@ -68,10 +68,10 @@ export default function cnt<
 
   // Get Size
   const kSize = params?.size ?? theme.initial?.size;
-  const cSize =
-    mainTheme.sizes !== undefined &&
-    kSize !== undefined &&
-    tools.resolveToggle(mainTheme.sizes[kSize], active);
+  let cSize: Array<string | string[] | undefined | false> | string | undefined;
+  if (mainTheme.sizes && kSize) {
+    cSize = tools.resolveToggleComplex(mainTheme.sizes[kSize], 'sizes', params);
+  }
 
   // Get State
   const kState = params?.state ?? theme.initial?.state;

@@ -38,7 +38,7 @@ export interface CntThemeItem<
     V,
     string | Omit<CntThemeModule<V, S, F, SS>, 'variants'>
   >;
-  sizes?: Partial<Record<S, string | CntThemeToggle>>;
+  sizes?: CntRecord<S, string | Omit<CntThemeModule<V, S, F, SS>, 'sizes'>>;
 
   states?: Partial<Record<SS, string | CntThemeToggle>>;
   flags?: Partial<Record<F, string | CntThemeToggle>>;
